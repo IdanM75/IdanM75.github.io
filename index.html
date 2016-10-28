@@ -211,8 +211,9 @@
             margin: 0 auto;
             box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.40);
             transition: 0.4s;
+            position: absolute;
             width: 80%;
-            height: 180px;
+            height: 100%;
             border-radius: 5px;
         }
 
@@ -234,16 +235,9 @@
             width: 70%;
         }
 
-        .indicators-size {
-            display: block;
-            margin: 0 auto;
-            left: 0;
-            width: 100%;
-        }
-
     </style>
 </head>
-<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
+<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60" style="overflow-x:hidden;">
 
 <nav class="navbar navbar-default navbar-fixed-top">
     <div class="container">
@@ -274,8 +268,8 @@
 
 
 <!-- Container (About Section) -->
-<div style="position: absolute; height: 100%; width: 100%; top: calc(100% *1);">
-    <div id="about" class="container-fluid" style="position: absolute; height: 50%; width: 100%; top: 0%;">
+<div style="position: absolute; height: 100%; width: 100%; top: calc(100% *1); left: 0%;">
+    <div id="about" class="container-fluid" style="position: absolute; height: 50%; width: 100%; top: 0%; left: 0%;">
         <div class="row">
             <div class="col-sm-12">
                 <h2>אז קצת על עצמי</h2><br>
@@ -288,10 +282,9 @@
 
     <br>
 
-    <div class="container-fluid bg-grey text-center" style="position: absolute;height: 40%; width: 100%; top: 50%;">
-        <h1><b>תגובות מלקוחות</b></h1>
-        <br>
-        <div id="myCarousel" class="carousel slide text-center" data-ride="carousel">
+    <div class="container-fluid bg-grey text-center" style="position: absolute;height: 40%; width: 100%; top: 50%; left: 0%;">
+        <h1 style="position: absolute;height: 20%; width: 100%; top: 0%; left: 0%;"><b>תגובות מלקוחות</b></h1>
+        <div id="myCarousel" class="carousel slide text-center" data-ride="carousel" style="position: absolute;height: 70%; width: 100%; top: 30%;">
             <!-- Wrapper for slides -->
             <div class="carousel-inner coments-size" role="listbox">
                 <div class="item active">
@@ -332,72 +325,72 @@
 <!-- Container (Services Section) -->
 <div id="services" class="container-fluid text-center" style="position: absolute; height: 100%; width: 100%; top: calc(100% *2); left: 0%; display: block; margin: 0 auto; padding-right: 15px; padding-left: 15px;">
     <h2><b>העבודות שלי</b></h2>
-    <div class="slideanim" style="position: absolute;height: 90%; width: 100%; top: 18%;">
-        <div class="row" style="position: absolute;height: 27%; width: 100%; top: calc(27% *0);">
-            <div class="col-sm-3">
+    <div class="slideanim" style="position: absolute;height: 90%; width: 100%; top: 18%; left: 0%;">
+        <div class="row" style="position: absolute;height: 27%; width: 100%; top: calc(27% *0); left: 0%;">
+            <div class="col-sm-3" style="height: 90%;">
                 <div class="card">
-                    <img src="res/1.jpg" alt="Avatar" style="width: 100%;height: 100%">
+                    <img src="res/1.jpg" alt="Avatar" style="position: relative; width: 100%; height: 100%; left: 0%; top: 0%;">
                 </div>
             </div>
-            <div class="col-sm-3">
+            <div class="col-sm-3" style="height: 90%;">
                 <div class="card">
-                    <img src="res/2.jpg" alt="Avatar" style="width: 100%;height: 100%">
+                    <img src="res/2.jpg" alt="Avatar" style="position: relative; width: 100%; height: 100%; left: 0%; top: 0%;">
                 </div>
             </div>
-            <div class="col-sm-3">
+            <div class="col-sm-3" style="height: 90%;">
                 <div class="card">
-                    <img src="res/3.jpg" alt="Avatar" style="width: 100%;height: 100%">
+                    <img src="res/3.jpg" alt="Avatar" style="position: relative; width: 100%; height: 100%; left: 0%; top: 0%;">
                 </div>
             </div>
-            <div class="col-sm-3">
+            <div class="col-sm-3" style="height: 90%;">
                 <div class="card">
-                    <img src="res/4.jpg" alt="Avatar" style="width: 100%;height: 100%">
-                </div>
-            </div>
-        </div>
-
-        <div class="row" style="position: absolute;height: 27%; width: 100%; top: calc(27% *1);">
-            <div class="col-sm-3">
-                <div class="card">
-                    <img src="res/5.jpg" alt="Avatar" style="width: 100%;height: 100%">
-                </div>
-            </div>
-            <div class="col-sm-3">
-                <div class="card">
-                    <img src="res/6.jpg" alt="Avatar" style="width: 100%;height: 100%">
-                </div>
-            </div>
-            <div class="col-sm-3">
-                <div class="card">
-                    <img src="res/7.jpg" alt="Avatar" style="width: 100%;height: 100%">
-                </div>
-            </div>
-            <div class="col-sm-3">
-                <div class="card">
-                    <img src="res/8.jpg" alt="Avatar" style="width: 100%;height: 100%">
+                    <img src="res/4.jpg" alt="Avatar" style="position: relative; width: 100%; height: 100%; left: 0%; top: 0%;">
                 </div>
             </div>
         </div>
 
-        <div class="row" style="position: absolute;height: 27%; width: 100%; top: calc(27% *2);">
-            <div class="col-sm-3">
+        <div class="row" style="position: absolute;height: 27%; width: 100%; top: calc(27% *1); left: 0%;">
+            <div class="col-sm-3" style="height: 90%;">
                 <div class="card">
-                    <img src="res/9.jpg" alt="Avatar" style="width: 100%;height: 100%">
+                    <img src="res/5.jpg" alt="Avatar" style="position: relative; width: 100%; height: 100%; left: 0%; top: 0%;">
                 </div>
             </div>
-            <div class="col-sm-3">
+            <div class="col-sm-3" style="height: 90%;">
                 <div class="card">
-                    <img src="res/10.jpg" alt="Avatar" style="width: 100%;height: 100%">
+                    <img src="res/6.jpg" alt="Avatar" style="position: relative; width: 100%; height: 100%; left: 0%; top: 0%;">
                 </div>
             </div>
-            <div class="col-sm-3">
+            <div class="col-sm-3" style="height: 90%;">
                 <div class="card">
-                    <img src="res/11.jpg" alt="Avatar" style="width: 100%;height: 100%">
+                    <img src="res/7.jpg" alt="Avatar" style="position: relative; width: 100%; height: 100%; left: 0%; top: 0%;">
                 </div>
             </div>
-            <div class="col-sm-3">
+            <div class="col-sm-3" style="height: 90%;">
                 <div class="card">
-                    <img src="res/12.jpg" alt="Avatar" style="width: 100%;height: 100%">
+                    <img src="res/8.jpg" alt="Avatar" style="position: relative; width: 100%; height: 100%; left: 0%; top: 0%;">
+                </div>
+            </div>
+        </div>
+
+        <div class="row" style="position: absolute;height: 27%; width: 100%; top: calc(27% *2); left: 0%;">
+            <div class="col-sm-3" style="height: 90%;">
+                <div class="card">
+                    <img src="res/9.jpg" alt="Avatar" style="position: relative; width: 100%; height: 100%; left: 0%; top: 0%;">
+                </div>
+            </div>
+            <div class="col-sm-3" style="height: 90%;">
+                <div class="card">
+                    <img src="res/10.jpg" alt="Avatar" style="position: relative; width: 100%; height: 100%; left: 0%; top: 0%;">
+                </div>
+            </div>
+            <div class="col-sm-3" style="height: 90%;">
+                <div class="card">
+                    <img src="res/11.jpg" alt="Avatar" style="position: relative; width: 100%; height: 100%; left: 0%; top: 0%;">
+                </div>
+            </div>
+            <div class="col-sm-3" style="height: 90%;">
+                <div class="card">
+                    <img src="res/12.jpg" alt="Avatar" style="position: relative; width: 100%; height: 100%; left: 0%; top: 0%;">
                 </div>
             </div>
         </div>
@@ -405,11 +398,11 @@
 </div>
 
 <!-- Container (Pricing Section) -->
-<div id="pricing" class="container-fluid" style="position: absolute; height: 100%; width: 100%; top: calc(100% *3);">
+<div id="pricing" class="container-fluid" style="position: absolute; height: 100%; width: 100%; top: calc(100% *3); left: 0%;">
     <div class="text-center">
         <h4><b>מחירון</b></h4>
     </div>
-    <div class="slideanim" style="position: absolute;height: 30%; width: 100%; top: 12%;">
+    <div class="slideanim" style="position: absolute;height: 30%; width: 100%; top: 12%; left: 0%;">
         <div class="col-sm-2">
             <div class="price-card">
                 <h2 align="center">hihi</h2>
@@ -454,8 +447,7 @@
         </div>
     </div>
 
-    <div class="row slideanim" style="position: absolute;height: 65%; width: 100%; top: 24%;">
-        <br><br><br><br>
+    <div class="row slideanim" style="position: absolute;height: 65%; width: 100%; top: 35%; left: 0%;">
         <div class="col-sm-4">
             <div class="panel panel-default text-center">
                 <div class="panel-heading">
@@ -517,7 +509,7 @@
 </div>
 
 <!-- Container (Contact Section) -->
-<div id="contact" class="container-fluid bg-grey" style="position: absolute; height: 100%; width: 100%; top: calc(100% *4);">
+<div id="contact" class="container-fluid bg-grey" style="position: absolute; height: 100%; width: 100%; top: calc(100% *4); left: 0%;">
     <h2 class="text-center"><b>צור קשר</b></h2>
     <div class="row">
         <div class="col-sm-5">
