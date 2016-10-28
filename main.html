@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+<html lang="heb" dir="rtl">
+<head>
+    <title>נוי הדר, עיצוב ציפורניים בלק ג'ל</title>
+    <link rel="shortcut icon" href="res/icon.ico" />
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <style>
+        body {
+            font: 400 15px Lato, sans-serif;
+            line-height: 1.8;
+            color: #818181;
+        }
+        h2 {
+            font-size: 24px;
+            text-transform: uppercase;
+            color: #303030;
+            font-weight: 600;
+            margin-bottom: 30px;
+        }
+        h4 {
+            font-size: 19px;
+            line-height: 1.375em;
+            color: #303030;
+            font-weight: 400;
+            margin-bottom: 30px;
+        }
+        .main-page-image {;
+            height: 1000px;
+            background-image: url("res/mainImage2.jpg");
+            background-size: 100% 100%;
+            color: #fff;
+            padding: 100px 25px;
+            font-family: Montserrat, sans-serif;
+        }
+        .container-fluid {
+            padding: 60px 50px;
+        }
+        .bg-grey {
+            background-color: #ededed;
+        }
+        .logo-small {
+            color: #f4511e;
+            font-size: 50px;
+        }
+        .logo {
+            color: #f4511e;
+            font-size: 200px;
+        }
+        .thumbnail {
+            padding: 0 0 15px 0;
+            border: none;
+            border-radius: 0;
+        }
+        .thumbnail img {
+            width: 100%;
+            height: 100%;
+            margin-bottom: 10px;
+        }
+        .carousel-control.right, .carousel-control.left {
+            display: block;
+            position: absolute;
+            top: 80px;
+            background-image: none;
+            color: #ce00ff;
+        }
+        .carousel-indicators li {
+            border-color: #ce00ff;
+        }
+        .carousel-indicators li.active {
+            background-color: #ce00ff;
+        }
+        .item h4 {
+            font-size: 19px;
+            line-height: 1.375em;
+            font-weight: 400;
+            font-style: italic;
+            margin: 70px 0;
+            padding-top: 30px;
+        }
+        .item span {
+            font-style: normal;
+        }
+        .panel {
+            border: 1px solid #ce00ff;
+            border-radius:0 !important;
+            transition: box-shadow 0.5s;
+        }
+        .panel:hover {
+            box-shadow: 5px 0px 40px rgba(0,0,0, .2);
+        }
+        .panel-footer .btn:hover {
+            border: 1px solid #ce00ff;
+            background-color: #fff !important;
+            color: #ce00ff;
+        }
+        .panel-heading {
+            color: #fff !important;
+            background-color: #ce00ff !important;
+            padding: 25px;
+            border-bottom: 1px solid transparent;
+            border-top-left-radius: 0px;
+            border-top-right-radius: 0px;
+            border-bottom-left-radius: 0px;
+            border-bottom-right-radius: 0px;
+        }
+        .panel-footer {
+            background-color: white !important;
+        }
+        .panel-footer h3 {
+            font-size: 32px;
+        }
+        .panel-footer h4 {
+            color: #aaa;
+            font-size: 14px;
+        }
+        .panel-footer .btn {
+            margin: 15px 0;
+            background-color: #ce00ff;
+            color: #fff;
+        }
+        .navbar {
+            margin-bottom: 0;
+            height: 70px;
+            background-color: #ffffff;
+            z-index: 9999;
+            border: 0;
+            font-size: 16px !important;
+            line-height: 1.42857143 !important;
+            letter-spacing: 3px;
+            border-radius: 0;
+            font-family: Montserrat, sans-serif;
+        }
+        .navbar li a, .navbar .navbar-brand {
+            color: #ce00ff !important;
+            transition: background-color 0.3s;
+            height: 70px;
+            vertical-align: middle
+        }
+        .navbar-nav li a:hover{
+            color: #ce00ff !important;
+            background-color: #d1d1d1 !important;
+        }
+        .navbar-nav li.active a {
+            color: #ce00ff !important;
+            background-color: #a8a8a8 !important;
+        }
+        .navbar-default .navbar-toggle {
+            border-color: transparent;
+            color: #ce00ff !important;
+        }
+        footer .glyphicon {
+            font-size: 20px;
+            margin-bottom: 20px;
+            color: #ce00ff;
+        }
+        .slideanim {visibility:hidden;}
+        .slide {
+            animation-name: slide;
+            -webkit-animation-name: slide;
+            animation-duration: 1s;
+            -webkit-animation-duration: 1s;
+            visibility: visible;
+        }
+        @keyframes slide {
+            0% {
+                opacity: 0;
+                transform: translateY(70%);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0%);
+            }
+        }
+        @-webkit-keyframes slide {
+            0% {
+                opacity: 0;
+                -webkit-transform: translateY(70%);
+            }
+            100% {
+                opacity: 1;
+                -webkit-transform: translateY(0%);
+            }
+        }
+        @media screen and (max-width: 768px) {
+            .col-sm-4 {
+                text-align: center;
+                margin: 25px 0;
+            }
+            .btn-lg {
+                width: 100%;
+                margin-bottom: 35px;
+            }
+        }
+        @media screen and (max-width: 480px) {
+            .logo {
+                font-size: 150px;
+            }
+        }
+
+        .card {
+            display: block;
+            margin: 0 auto;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.40);
+            transition: 0.4s;
+            width: 80%;
+            height: 200px;
+            border-radius: 5px;
+        }
+
+        .card:hover {
+            box-shadow: 0 8px 24px 0 rgba(0, 0, 0, 0.50);
+        }
+        .star {
+            display: block;
+            position: fixed;
+            top: 0px;
+            color: #dfc600;
+        }
+
+        .price-card {
+            display: block;
+            margin: 0 auto;
+            width: 80%;
+            box-shadow: 0 4px 8px 0 rgba(0,0,0,0.4);
+
+        }
+
+        .coments-size {
+            display: block;
+            margin: 0 auto;
+            width: 70%;
+        }
+
+        .indicators-size {
+            display: block;
+            margin: 0 auto;
+            left: 0;
+            width: 100%;
+        }
+
+    </style>
+</head>
+<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
+
+<nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="nav" href="#myPage">
+                <img src="res/logo.png" height="70" width="270" align="top">
+            </a>
+        </div>
+        <div class="collapse navbar-collapse" id="myNavbar">
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="#contact" style="display: table-cell; vertical-align: middle;"><b>צור קשר</b></a></li>
+                <li><a href="#pricing" style="display: table-cell; vertical-align: middle;"><b>מחירון</b></a></li>
+                <li><a href="#services" style="display: table-cell; vertical-align: middle;"><b>העבודות שלי</b></a></li>
+                <li><a href="#about" style="display: table-cell; vertical-align: middle;"><b>על עצמי</b></a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<div class="main-page-image text-center">
+</div>
+
+<!-- Container (About Section) -->
+<div id="about" class="container-fluid">
+    <div class="row">
+        <div class="col-sm-12">
+            <h2>אז קצת על עצמי</h2><br>
+            <h4>בלאבלאבלא בלאבלאבלא בלאבלאבלא בלאבלאבלא בלאבלאבלא</h4><br>
+            <p>ועוד קצת בלאבלאבלא</p>
+            <br><br><br><br>
+        </div>
+    </div>
+</div>
+
+<br>
+
+<div class="container-fluid bg-grey text-center" style="display: block;position: relative;height: 400px;">
+    <h1><b>תגובות מלקוחות</b></h1>
+    <br>
+    <div id="myCarousel" class="carousel slide text-center" data-ride="carousel">
+        <!-- Wrapper for slides -->
+        <div class="carousel-inner coments-size" role="listbox">
+            <div class="item active">
+                <h2><p style="color: #ce00ff; font-size: 24px;">♥ ♥ ♥ ♥ ♥</p>"ממליצה בחום! הטיפול מקצועי ויסודי מאוד, לא תישארי עם חתיכת עור מיותר או ציפורן שלא תאהבי. הלק נשאר המון זמן ונראה תמיד טוב. נוי נהדרת ומטפלת בסבלנות עד שתצא התוצאה שרצית "<br><span style="font-style:normal;">Shir Akuka‎‏</span></h2>
+            </div>
+            <div class="item">
+                <h2><p style="color: #ce00ff; font-size: 24px;">♥ ♥ ♥ ♥ ♥</p>"הכי מושלם שיש! תותחית על"<br><span style="font-style:normal;">Refael Ben Gigi</span></h2>
+            </div>
+            <div class="item">
+                <h2><p style="color: #ce00ff;  font-size: 24px;">♥ ♥ ♥ ♥ ♥</p>"יצא מהממם! החמיאו לי מלא!"<br><span style="font-style:normal;">Rotem Pinto</span></h2>
+            </div>
+        </div>
+    </div>
+    <!-- Indicators -->
+    <!--<div style="display: block; position: relative; margin: 0 auto; width: 100%; height: 100px">
+        <ol class="carousel-indicators indicators-size">
+            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+            <li data-target="#myCarousel" data-slide-to="1"></li>
+            <li data-target="#myCarousel" data-slide-to="2"></li>
+        </ol>
+    </div>-->
+
+    <!-- Left and right controls -->
+    <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+    </a>
+
+    <br>
+</div>
+
+
+<!-- Container (Services Section) -->
+<div id="services" class="container-fluid text-center">
+    <h2><b>העבודות שלי</b></h2>
+    <br>
+    <div class="slideanim">
+    <div class="row">
+        <div class="col-sm-3">
+            <div class="card">
+                <img src="res/1.jpg" alt="Avatar" style="width: 100%;height: 100%">
+            </div>
+        </div>
+        <div class="col-sm-3">
+            <div class="card">
+                <img src="res/2.jpg" alt="Avatar" style="width: 100%;height: 100%">
+            </div>
+        </div>
+        <div class="col-sm-3">
+            <div class="card">
+                <img src="res/3.jpg" alt="Avatar" style="width: 100%;height: 100%">
+            </div>
+        </div>
+        <div class="col-sm-3">
+            <div class="card">
+                <img src="res/4.jpg" alt="Avatar" style="width: 100%;height: 100%">
+            </div>
+        </div>
+    </div>
+    <br><br>
+    <div class="row">
+        <div class="col-sm-3">
+            <div class="card">
+                <img src="res/5.jpg" alt="Avatar" style="width: 100%;height: 100%">
+            </div>
+        </div>
+        <div class="col-sm-3">
+            <div class="card">
+                <img src="res/6.jpg" alt="Avatar" style="width: 100%;height: 100%">
+            </div>
+        </div>
+        <div class="col-sm-3">
+            <div class="card">
+                <img src="res/7.jpg" alt="Avatar" style="width: 100%;height: 100%">
+            </div>
+        </div>
+        <div class="col-sm-3">
+            <div class="card">
+                <img src="res/8.jpg" alt="Avatar" style="width: 100%;height: 100%">
+            </div>
+        </div>
+    </div>
+    <br><br>
+    <div class="row">
+        <div class="col-sm-3">
+            <div class="card">
+                <img src="res/9.jpg" alt="Avatar" style="width: 100%;height: 100%">
+            </div>
+        </div>
+        <div class="col-sm-3">
+            <div class="card">
+                <img src="res/10.jpg" alt="Avatar" style="width: 100%;height: 100%">
+            </div>
+        </div>
+        <div class="col-sm-3">
+            <div class="card">
+                <img src="res/11.jpg" alt="Avatar" style="width: 100%;height: 100%">
+            </div>
+        </div>
+        <div class="col-sm-3">
+            <div class="card">
+                <img src="res/12.jpg" alt="Avatar" style="width: 100%;height: 100%">
+            </div>
+        </div>
+    </div>
+    </div>
+</div>
+<br><br><br><br><br>
+
+<!-- Container (Pricing Section) -->
+<div id="pricing" class="container-fluid">
+    <div class="text-center">
+        <h4><b>מחירון</b></h4>
+    </div>
+    <div class="slideanim">
+    <div class="col-sm-2">
+        <div class="price-card">
+            <h2 align="center">hihi</h2>
+            <p align="center">hihihi</p>
+            <p align="center">hihihi</p>
+        </div>
+    </div>
+    <div class="col-sm-2">
+        <div class="price-card">
+            <h2 align="center">hihi</h2>
+            <p align="center">hihihi</p>
+            <p align="center">hihihi</p>
+        </div>
+    </div>
+    <div class="col-sm-2">
+        <div class="price-card">
+            <h2 align="center">hihi</h2>
+            <p align="center">hihihi</p>
+            <p align="center">hihihi</p>
+        </div>
+    </div>
+    <div class="col-sm-2">
+        <div class="price-card">
+            <h2 align="center">hihi</h2>
+            <p align="center">hihihi</p>
+            <p align="center">hihihi</p>
+        </div>
+    </div>
+    <div class="col-sm-2">
+        <div class="price-card">
+            <h2 align="center">hihi</h2>
+            <p align="center">hihihi</p>
+            <p align="center">hihihi</p>
+        </div>
+    </div>
+    <div class="col-sm-2">
+        <div class="price-card">
+            <h2 align="center">hihi</h2>
+            <p align="center">hihihi</p>
+            <p align="center">hihihi</p>
+        </div>
+    </div>
+    </div>
+    <br><br><br><br>
+
+    <div class="row slideanim">
+        <br><br><br><br>
+        <div class="col-sm-4">
+            <div class="panel panel-default text-center">
+                <div class="panel-heading">
+                    <h1>Basic</h1>
+                </div>
+                <div class="panel-body">
+                    <p><strong>20</strong> Lorem</p>
+                    <p><strong>15</strong> Ipsum</p>
+                    <p><strong>5</strong> Dolor</p>
+                    <p><strong>2</strong> Sit</p>
+                    <p><strong>Endless</strong> Amet</p>
+                </div>
+                <div class="panel-footer">
+                    <h3>$19</h3>
+                    <h4>per month</h4>
+                    <button class="btn btn-lg">Sign Up</button>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-4">
+            <div class="panel panel-default text-center">
+                <div class="panel-heading">
+                    <h1>Pro</h1>
+                </div>
+                <div class="panel-body">
+                    <p><strong>50</strong> Lorem</p>
+                    <p><strong>25</strong> Ipsum</p>
+                    <p><strong>10</strong> Dolor</p>
+                    <p><strong>5</strong> Sit</p>
+                    <p><strong>Endless</strong> Amet</p>
+                </div>
+                <div class="panel-footer">
+                    <h3>$29</h3>
+                    <h4>per month</h4>
+                    <button class="btn btn-lg">Sign Up</button>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-4">
+            <div class="panel panel-default text-center">
+                <div class="panel-heading">
+                    <h1>Premium</h1>
+                </div>
+                <div class="panel-body">
+                    <p><strong>100</strong> Lorem</p>
+                    <p><strong>50</strong> Ipsum</p>
+                    <p><strong>25</strong> Dolor</p>
+                    <p><strong>10</strong> Sit</p>
+                    <p><strong>Endless</strong> Amet</p>
+                </div>
+                <div class="panel-footer">
+                    <h3>$49</h3>
+                    <h4>per month</h4>
+                    <button class="btn btn-lg">Sign Up</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Container (Contact Section) -->
+<div id="contact" class="container-fluid bg-grey">
+    <h2 class="text-center"><b>צור קשר</b></h2>
+    <div class="row">
+        <div class="col-sm-5">
+            <p>צרו איתי קשר ואחזור אליכם במהירות האפשרית</p>
+            <p><span class="glyphicon glyphicon-map-marker"></span>ישראל, ראשון לציון, התזמורת 29</p>
+            <p><span class="glyphicon glyphicon-phone"></span>0543080779</p>
+            <p><span class="glyphicon glyphicon-envelope"></span>myemail@something.com</p>
+        </div>
+        <div class="col-sm-7 slideanim">
+            <div class="row">
+                <div class="col-sm-6 form-group">
+                    <input class="form-control" id="name" name="name" placeholder="Name" type="text" required>
+                </div>
+                <div class="col-sm-6 form-group">
+                    <input class="form-control" id="email" name="email" placeholder="Email" type="email" required>
+                </div>
+            </div>
+            <textarea class="form-control" id="comments" name="comments" placeholder="Comment" rows="5"></textarea><br>
+            <div class="row">
+                <div class="col-sm-12 form-group">
+                    <button class="btn btn-default pull-right" type="submit">Send</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="googleMap" style="height:400px;width:100%;"></div>
+
+<!-- Add Google Maps -->
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD9BNeb6Do5449Q8UWcFZjQE-XKSWgrP-s"></script>
+<script>
+    var myCenter = new google.maps.LatLng(31.9660551, 34.7752690);
+
+    function initialize() {
+        var mapProp = {
+            center:myCenter,
+            zoom:12,
+            mapTypeId:google.maps.MapTypeId.ROADMAP
+        };
+
+        var map = new google.maps.Map(document.getElementById("googleMap"),mapProp);
+
+        var marker = new google.maps.Marker({
+            position:myCenter,
+        });
+
+        marker.setMap(map);
+    }
+
+    google.maps.event.addDomListener(window, 'load', initialize);
+</script>
+
+<footer class="container-fluid text-center">
+    <a href="#myPage" title="To Top">
+        <span class="glyphicon glyphicon-chevron-up"></span>
+    </a>
+</footer>
+
+<script>
+    $(document).ready(function(){
+        // Add smooth scrolling to all links in navbar + footer link
+        $(".navbar a, footer a[href='#myPage']").on('click', function(event) {
+            // Make sure this.hash has a value before overriding default behavior
+            if (this.hash !== "") {
+                // Prevent default anchor click behavior
+                event.preventDefault();
+
+                // Store hash
+                var hash = this.hash;
+
+                // Using jQuery's animate() method to add smooth page scroll
+                // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
+                $('html, body').animate({
+                    scrollTop: $(hash).offset().top
+                }, 900, function(){
+
+                    // Add hash (#) to URL when done scrolling (default click behavior)
+                    window.location.hash = hash;
+                });
+            } // End if
+        });
+
+        $(window).scroll(function() {
+            $(".slideanim").each(function(){
+                var pos = $(this).offset().top;
+
+                var winTop = $(window).scrollTop();
+                if (pos < winTop + 600) {
+                    $(this).addClass("slide");
+                }
+            });
+        });
+    })
+</script>
+
+</body>
+</html>
