@@ -1,5 +1,5 @@
 # NoyHadarNails
-My cousin buisness website - 2016
+My cousin business website - 2016
 ## About
 This project was small website for my cousin business.<br />
 For me it was first expereince with Bootstrap and web.<br />
